@@ -1,0 +1,31 @@
+[project]
+name = "null-ls_test_repo"
+version = "0"
+dependencies = [
+    "black",
+    "darker",
+    "flynt",
+    "isort",
+]
+
+[project.optional-dependencies]
+dev = ["pip-tools"]
+
+[tool.black]
+line-length = 110
+target-version = ['py39', 'py310', 'py311']
+
+[tool.darker]
+revision = "origin/main.."
+isort = true
+verbose = true
+line_length = 110
+log_level = "DEBUG"
+
+[tool.flynt]
+line-length = 110
+
+[tool.isort]
+line_length = 110
+skip_gitignore = true
+profile = "black"
